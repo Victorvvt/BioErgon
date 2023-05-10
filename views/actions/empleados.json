@@ -1,0 +1,24 @@
+{
+    "empleado":[
+       {
+            "nombre":"Pedro",
+            "actividad":"tenis",
+            "fase":1
+        },
+        {
+            "nombre":"Maria",
+            "actividad":"futbol",
+            "fase":1
+        },
+        {
+            "nombre":"Gema",
+            "actividad":"atletismo",
+            "fase":1
+        },
+        {
+            "nombre":"Sergio",
+            "actividad":"tenis",
+            "fase":1
+        }
+    ]
+}
