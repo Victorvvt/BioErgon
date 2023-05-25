@@ -28,7 +28,7 @@
               alt="logo de la empresa"></a>
           <ul class="navbar-nav d-flex justify-content-center align-items-center">
             <li class="nav-item">
-              <a id="btn__logIn" class="nav-link btn btn-primary m-2 p-2 active" href="logIn.html">LOG IN</a>
+              <a id="btn__logIn" class="nav-link btn btn-primary m-2 p-2 active text-white" href="logIn.html">LOG IN</a>
             </li>
           </ul>
         </div> 
@@ -42,7 +42,7 @@
         <div class="bg-body-secondary rounded-3 px-2">Resgistrate</div>
       </div>
       <div class="col-lg-6 col-sm-12">
-        <label for="singIn__nombre" class="form-label mt-4 mb-1">Nombre</label>
+        <label for="singIn__nombre" class="form-label mt-5 mb-1">Nombre</label>
         <input type="text" id="signIn__nombre" class="form-control" placeholder="Nombre" required>
         <div class="valid-feedback">
           Correcto!!
@@ -53,7 +53,7 @@
 
       </div>
       <div class="col-lg-6 col-sm-12">
-        <label for="signIn__apellido" class="form-label mt-4  mb-">Apellido</label>
+        <label for="signIn__apellido" class="form-label mt-5 mb-1">Apellido</label>
         <input type="text" id="signIn__apellido" class="form-control  align-items-center mx-auto" placeholder="Apellido" required>
         <div class="valid-feedback">
           Correcto!!
@@ -75,7 +75,7 @@
       </div>
       <div class="col-lg-6 col-sm-12 ">
         <label for="signIn__contraseña" class="mt-4 form_label mb-1">Contraseña</label>
-        <input type="text" id="signIn__contraseña" class="form-control" placeholder="Contraseña" required
+        <input type="password" id="signIn__contraseña" class="form-control" placeholder="Contraseña" required
           pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$">
         <div class="valid-feedback">
           Correcto!!
@@ -87,7 +87,7 @@
 
       <div class="col-lg-6 col-sm-12">
         <label for="signIn__confirmContraseña" class="mt-4 form-label mb-1 ">Confirm Contraseña</label>
-        <input type="text" id="signIn__confirmContraseña" class="form-control" placeholder="Confirma Contraseña"
+        <input type="password" id="signIn__confirmContraseña" class="form-control" placeholder="Confirma Contraseña"
           required>
         <div class="valid-feedback">
           Correcto!!
@@ -112,7 +112,7 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="/js/signIn.js"></script>
+  <script src="/js/validation.js"></script>
 
 </body>
 

@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse" id="nav-toggler">
         <a class="navbar-brand" href="#"><img class="logo" src="/public/Logo_Bioergon_sin_fondo.png" width="100"
             alt="logo de la empresa"></a>
-        <p class="fw-bolder">ACTIVIDADES</p>
+        <p class="fw-bolder">DEPORTE FEDERADO</p>
         <div class="navbar-nav d-flex justify-content-center align-items-center">
           <form action="" class="d-flex ">
             <input type="search" id="search" placeholder="Buscar" class="form-control">
@@ -51,29 +51,58 @@
     </div>
     <div class="row d-flex justify-content-center">
       <div class="col-8">
-        <form id="form-actividades" class="row w-100 d-flex justify-content-center align-content-center ">
+
+        <form id="form-federados" class="row w-100 d-flex justify-content-center align-content-center ">
           <div class="col-8 d-flex justify-content-center align-content-center">
             <div class="col-6 mx-3">
               <label for="nombre" class="form-label mt-3 small">Nombre</label>
               <input type="text" class="form-control" id="nombre">
             </div>
+            <div class="col-6 mx-3">
+              <label><input type="checkbox" id="checkbox" name="usuarioFederado[]" value="Pedro">Pedro</label>
+
+              <label><input type="checkbox" id="checkbox" name="usuarioFederado[]" value="Maria">Maria</label>
+
+              <label> <input type="checkbox" id="checkbox" name="usuarioFederado[]" value="Luis">Luis</label>
+
+              <label><input type="checkbox" id="checkbox" name="usuarioFederado[]" value="Silvia">Silvia</label>
+
+
+            </div>
           </div>
+
           <div class="col-12 d-flex justify-content-center">
-            <button type="submit" class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+            <button id="btn-guardar" name="btn-guardar" value="btn-guardar" type="submit"
+              class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+
           </div>
+
 
         </form>
         <form id="form-actualizar" class="row w-100 d-flex justify-content-center align-content-center d-none">
           <div class="col-8 d-flex justify-content-center align-content-center">
             <input type="hidden" id="id-U">
             <div class="col-6 mx-3">
-              <label for="nombre" class="form-label mt-3 small">Nombre</label>
+              <label for="nombre-U" class="form-label mt-3 small">Nombre</label>
               <input type="text" class="form-control" id="nombre-U">
             </div>
+            <div class="col-6 mx-3">
+              <label><input type="checkbox" id="checkbox-U" name="usuarioFederado[]" value="Pedro">Pedro</label>
+
+              <label><input type="checkbox" id="checkbox-U" name="usuarioFederado[]" value="Maria">Maria</label>
+
+              <label> <input type="checkbox" id="checkbox-U" name="usuarioFederado[]" value="Luis">Luis</label>
+
+              <label><input type="checkbox" id="checkbox-U" name="usuarioFederado[]" value="Silvia">Silvia</label>
+
+            </div>
           </div>
+
           <div class="col-12 d-flex justify-content-center">
-            <button id="btn-actualizar" type="submit" class="mt-4 col-auto rigth btn btn-success">Atualizar</button>
+            <button id="btn-actualizar" type="submit" class="mt-4 col-auto rigth btn btn-success">Actualizar</button>
+
           </div>
+
 
         </form>
 
@@ -81,16 +110,18 @@
     </div>
 
     <div id="libreta" class="row alert alert-info">
-      <div class="col-12 d-flex justify-content-center ">
-        <table id="resNombre" class=" table table-bordered w-50">
+      <div class="col-12 ">
+        <table id="resNombre" class="table table-bordered">
           <thead>
             <tr>
               <th>Id</th>
-              <th>Actividades</th>
+              <th>Nombre</th>
+              <th>Usuario Federado</th>
+
             </tr>
           </thead>
           <tbody id="res">
-
+            
           </tbody>
         </table>
       </div>
@@ -104,8 +135,9 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="/js/search-crud-actividades.js"></script>
-  <script src="/js/popUp.js" ></script>
+  <script src="/js/search-crud-Dfederados.js"></script>
+  <script src="/js/popUp.js"></script>
+
 </body>
 
 </html>

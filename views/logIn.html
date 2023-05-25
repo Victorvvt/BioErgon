@@ -27,7 +27,7 @@
               alt="logo de la empresa"></a>
           <ul class="navbar-nav d-flex justify-content-center align-items-center">
             <li class="nav-item">
-              <a href="/views/signIn.html" id="btn__signIn" class="nav-link active btn btn-primary m-2 p-2"
+              <a href="/views/signIn.html" id="btn__signIn" class="nav-link active btn btn-primary m-2 p-2 text-white"
                 aria-current="page">SIGN IN</a>
             </li>
         
@@ -56,12 +56,12 @@
       </div>
       <div class="col-lg-6 col-sm-12">
         <label for="logIn__contraseña" class="mt-4 form_label mb-1">Contraseña</label>
-        <input type="text" id="logIn__contraseña" class="form-control" placeholder="Contraseña" required
+        <input type="password" id="logIn__contraseña" class="form-control" placeholder="Contraseña" required
           pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{8,}$">
         <div class="valid-feedback">
           Correcto!!
         </div>
-        <div class="invalid-feedback fw-bolder">
+        <div class="invalid-feedback fw-bolder ">
           Debe tener: 1 mayuscula, 1 minuscula, 1 numero,1 caracter especial y minimo 8 caracteres
         </div>
       </div>
@@ -79,7 +79,7 @@
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-  <script src="/js/index.js"></script>
+  <script src="/js/validation.js"></script>
 </body>
 
 </html>
