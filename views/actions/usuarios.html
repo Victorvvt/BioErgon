@@ -50,175 +50,197 @@
       <div class="row d-flex justify-content-center">
         <strong id="confirmar" class="col-3 alert alert-info d-none text-center"></strong>
       </div>
-      <div class="col-md-6">
-        <div class="row d-flex justify-content-center">
-          <div class="col-12">
 
-            <form id="form-usuarios" class="row w-100 d-flex justify-content-center align-content-center ">
-              <div class="col-8 d-flex justify-content-center align-content-center">
-                
-                <div class="col-6 mx-3">
-                  <label for="nombre" class="form-label mt-3 small">Nombre</label>
-                  <input type="text" class="form-control" id="nombre">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="apellido" class="form-label mt-3 small">Apellidos</label>
-                  <input type="text" class="form-control" id="apellido">
-                </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-12">
+
+          <form id="form-usuarios" class="row w-100 d-flex justify-content-center align-content-center ">
+            <div class="col-8 d-flex justify-content-center align-content-center">
+
+              <div class="col-6 mx-3">
+                <label for="nombre" class="form-label mt-3 small">Nombre</label>
+                <input type="text" class="form-control" id="nombre">
               </div>
-              <div class="col-8 d-flex justify-content-center align-content-center ">
-                <div class="col-6 mx-3">
-                  <label for="peso" class="form-label mt-3 small">Peso</label>
-                  <input type="text" class="form-control" id="peso">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="altura" class="form-label mt-3 small">Altura</label>
-                  <input type="number" step="any" class="form-control" id="altura">
-                </div>
-
+              <div class="col-6 mx-3">
+                <label for="apellido" class="form-label mt-3 small">Apellidos</label>
+                <input type="text" class="form-control" id="apellido">
               </div>
-              <div class="col-8 d-flex justify-content-center align-content-center ">
-                <div class="col-6 mx-3">
-                  <label for="sexo" class="form-label mt-3 small">Sexo</label>
-                  <input type="text" class="form-control" id="sexo">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="actividad" class="form-label mt-3 small">Actividades</label>
-                  <input type="text" class="form-control" id="actividad">
-                </div>
+            </div>
+            <div class="col-8 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label for="peso" class="form-label mt-3 small">Peso</label>
+                <input type="number" class="form-control" id="peso">
               </div>
-              <div class="col-8 d-flex justify-content-center align-content-center ">
-                <div class="col-6 mx-3">
-                  <label for="sexo" class="form-label mt-3 small">Horas de entreno</label>
-                  <input type="text" class="form-control" id="horasEntreno">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="actividad" class="form-label mt-3 small">Lesiones previas</label>
-                  <input type="text" class="form-control" id="lesionesPrevias">
-                </div>
-              </div>
-              <div class="col-8 d-flex justify-content-center align-content-center ">
-                <div class="col-6 mx-3">
-                  <label for="sexo" class="form-label mt-3 small">Zonas afectadas </label>
-                  <input type="text" class="form-control" id="zonasAfectadas">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="actividad" class="form-label mt-3 small">Deportes federados</label>
-                  <input type="text" class="form-control" id="deportesFederados">
-                </div>
-              </div> 
-
-              <div class="col-9 w-50">
-                <label for="fecha" class="form-label mt-3 small">Fecha de nacimineto</label>
-                <input type="date" class="form-control text-center" id="fecha">
-
-
-              </div>
-              <div class="col-12 d-flex justify-content-center">
-                <button id="btn-guardar" type="submit" class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
-
+              <div class="col-6 mx-3">
+                <label for="altura" class="form-label mt-3 small">Altura</label>
+                <input type="number" step="any" class="form-control" id="altura">
               </div>
 
-
-            </form>
-            <form id="form-actualizar" class="row w-100 d-flex justify-content-center align-content-center d-none">
-              <div class="col-8 d-flex justify-content-center align-content-center">
-                <input type="hidden" id="id-U">
-                <div class="col-6 mx-3">
-                  <label for="nombre" class="form-label mt-3 small">Nombre</label>
-                  <input type="text" class="form-control" id="nombre-U">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="apellido" class="form-label mt-3 small">Apellidos</label>
-                  <input type="text" class="form-control" id="apellido-U">
-                </div>
+            </div>
+            <div class="col-8 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label for="sexo" class="form-label mt-3 small">Sexo</label>
+                <input type="text" class="form-control" id="sexo">
               </div>
-              <div class="col-8 d-flex justify-content-center align-content-center ">
-                <div class="col-6 mx-3">
-                  <label for="peso" class="form-label mt-3 small">Peso</label>
-                  <input type="text" class="form-control" id="peso-U">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="altura" class="form-label mt-3 small">Altura</label>
-                  <input type="number" step="any" class="form-control" id="altura-U">
-                </div>
-
+              <div class="col-6 mx-3">
+                <label for="años" class="form-label mt-3 small">Años</label>
+                <input type="number" class="form-control text-center" id="años">
               </div>
-              <div class="col-8 d-flex justify-content-center align-content-center ">
-                <div class="col-6 mx-3">
-                  <label for="sexo" class="form-label mt-3 small">Sexo</label>
-                  <input type="text" class="form-control" id="sexo-U">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="actividad" class="form-label mt-3 small">Actividades</label>
-                  <input type="text" class="form-control" id="actividad-U">
-                </div>
+            </div>
+            <div class="col-8 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label for="horasExperiencia" class="form-label mt-3 small">Horas de experiencia</label>
+                <input type="number" class="form-control" id="horasExperiencia">
               </div>
-              <div class="col-8 d-flex justify-content-center align-content-center ">
-                <div class="col-6 mx-3">
-                  <label for="sexo" class="form-label mt-3 small">Horas de entreno</label>
-                  <input type="text" class="form-control" id="horasEntreno-U">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="actividad" class="form-label mt-3 small">Lesiones previas</label>
-                  <input type="text" class="form-control" id="lesionesPrevias-U">
-                </div>
+              <div class="col-6 mx-3">
+                <label for="horasEntreno" class="form-label mt-3 small">Horas de entreno</label>
+                <input type="text" class="form-control" id="horasEntreno">
               </div>
-              <div class="col-8 d-flex justify-content-center align-content-center ">
-                <div class="col-6 mx-3">
-                  <label for="sexo" class="form-label mt-3 small">Zonas afectadas </label>
-                  <input type="text" class="form-control" id="zonasAfectadas-U">
-                </div>
-                <div class="col-6 mx-3">
-                  <label for="actividad" class="form-label mt-3 small">Deportes federados</label>
-                  <input type="text" class="form-control" id="deportesFederados-U">
-                </div>
-              </div> 
-
-
-              <div class="col-9 w-50">
-                <label for="fecha" class="form-label mt-3 small">Fecha de nacimineto</label>
-                <input type="date" class="form-control text-center" id="fecha-U">
-
-
+            </div>
+            <div class="col-8 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label for="lesionesPrevias" class="form-label mt-3 small">Lesiones previas</label>
+                <input type="text" class="form-control" id="lesionesPrevias">
               </div>
-              <div class="col-12 d-flex justify-content-center">
-
-                <button id="btn-actualizar" type="submit"
-                  class="mt-4 col-auto rigth btn btn-success ">Actualizar</button>
+              <div class="col-6 mx-3">
+                <label for="zonasAfectadas" class="form-label mt-3 small">Zonas afectadas </label>
+                <input type="text" class="form-control" id="zonasAfectadas">
               </div>
 
+            </div>
+            <div class="col-8 my-3 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label>Deportes federados<div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      DEPORTES
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="resDeportesFederados">
 
-            </form>
+                    </ul>
+                  </div></label>
+              </div>
+              <Label>Avtividades<div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="listaAvtividades"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    ACTIVIDADES
+                  </button>
 
-          </div>
+                  <div class="dropdown-menu" aria-labelledby="listaAvtividades">
+                    <div class="d-flex justify-content-center" id="resActivadades"> </div>
+                  </div>
+
+
+                </div></Label>
+
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+              <button id="btn-guardar" type="submit" class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+
+            </div>
+
+
+          </form>
+          <form id="form-actualizar" class="row w-100 d-flex justify-content-center align-content-center d-none">
+            <div class="col-8 d-flex justify-content-center align-content-center">
+              <input type="hidden" id="id-U">
+              <div class="col-6 mx-3">
+                <label for="nombre" class="form-label mt-3 small">Nombre</label>
+                <input type="text" class="form-control" id="nombre-U">
+              </div>
+              <div class="col-6 mx-3">
+                <label for="apellido" class="form-label mt-3 small">Apellidos</label>
+                <input type="text" class="form-control" id="apellido-U">
+              </div>
+            </div>
+            <div class="col-8 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label for="peso" class="form-label mt-3 small">Peso</label>
+                <input type="text" class="form-control" id="peso-U">
+              </div>
+              <div class="col-6 mx-3">
+                <label for="altura" class="form-label mt-3 small">Altura</label>
+                <input type="number" step="any" class="form-control" id="altura-U">
+              </div>
+
+            </div>
+            <div class="col-8 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label for="sexo" class="form-label mt-3 small">Sexo</label>
+                <input type="text" class="form-control" id="sexo-U">
+              </div>
+              <div class="col-6 mx-3" id="res_Actividad">
+                <label><input type="checkbox" name="" class="form-control" id="actividad-U"> Actividades</label>
+
+              </div>
+            </div>
+            <div class="col-8 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label for="sexo" class="form-label mt-3 small">Horas de entreno</label>
+                <input type="text" class="form-control" id="horasEntreno-U">
+              </div>
+              <div class="col-6 mx-3">
+                <label for="actividad" class="form-label mt-3 small">Lesiones previas</label>
+                <input type="text" class="form-control" id="lesionesPrevias-U">
+              </div>
+            </div>
+            <div class="col-8 d-flex justify-content-center align-content-center ">
+              <div class="col-6 mx-3">
+                <label for="sexo" class="form-label mt-3 small">Zonas afectadas </label>
+                <input type="text" class="form-control" id="zonasAfectadas-U">
+              </div>
+              <div class="col-6 mx-3">
+                <label for="actividad" class="form-label mt-3 small">Deportes federados</label>
+                <input type="text" class="form-control" id="deportesFederados-U">
+              </div>
+            </div>
+
+
+            <div class="col-9 w-50">
+              <label for="años" class="form-label mt-3 small">Años</label>
+              <input type="number" class="form-control text-center" id="años-U">
+
+
+            </div>
+            <div class="col-12 d-flex justify-content-center">
+
+              <button id="btn-actualizar" type="submit" class="mt-4 col-auto rigth btn btn-success ">Actualizar</button>
+            </div>
+
+
+          </form>
+
         </div>
       </div>
-      <div class="col-md-6">
-        <p class=" fw-bolder mt-5 text-lg-center">RESULTADOS</p>
-        <div id="libreta" class="row alert alert-info">
-          <div class="col-12 ">
-            <table id="resNombre" class="table table-bordered">
-              <thead>
-                <tr>
-                  <th>Id</th>
-                  <th>Nombre</th>
-                  <th>Apellido</th>
-                  <th>Sexo</th>
-                  <th>Peso</th>
-                  <th>Altura</th>
-                  <th>Actividades</th>
-                  <th>Fecha</th>
-                </tr>
-              </thead>
-              <tbody id="res">
 
-              </tbody>
-            </table>
-          </div>
+
+      <p class=" fw-bolder mt-5 text-lg-center">RESULTADOS</p>
+      <div id="libreta" class="row alert alert-info">
+        <div class="col-12 ">
+          <table id="resNombre" class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Sexo</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>Actividades</th>
+                <th>Años</th>
+                <th>Horas entrenadas</th>
+                <th>Lesiones previas</th>
+                <th>Zonas afectadas</th>
+              </tr>
+            </thead>
+            <tbody id="res">
+
+            </tbody>
+          </table>
         </div>
-
       </div>
+
+
 
     </div>
 

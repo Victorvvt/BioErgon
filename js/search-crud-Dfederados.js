@@ -39,7 +39,7 @@ $(document).ready(() => {
 
         let usuarioCheck = "";
         $('#checkbox:checked').each(function () {
-            usuarioCheck += `${$(this).val()} `
+            console.log($(this).val())
         })
 
         let nombre = $('#nombre').val()
