@@ -1,0 +1,369 @@
+
+
+
+  <div class="border">
+    <div class="row text-center mt-4">
+      <div class="col-md-4 col-sm-12">
+        <!--BTN MODAL USUARIOS  -->
+        <button id="btn-modal-usuarios" type="button" class="btn btn-primary" data-bs-toggle="modal"
+          data-bs-target="#crudUsuarios">
+          USUARIOS
+        </button>
+
+        <!-- MODAL USUARIOS -->
+        <div class="modal fade modal-xl" id="crudUsuarios" data-bs-backdrop="static" data-bs-keyboard="false"
+          tabindex="-1" aria-labelledby="crudUsuariosLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <!-- NAV -->
+                <div class="d-flex justify-content-end">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <nav class="navbar  navbar-expand-md bg-body-secondary mb-4">
+                  <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggler"
+                      aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="nav-toggler">
+                      <a class="navbar-brand" href="../principal.html"><img class="logo"
+                          src="/public/Logo_Bioergon_sin_fondo.png" width="100" alt="logo de la empresa"></a>
+
+                      <h3 id="resp-ok" class="fw-bolder">USUARIOS</h3>
+                      <div class="navbar-nav d-flex justify-content-center align-items-center">
+                        <form action="" class="d-flex ">
+                          <input type="search" id="search" placeholder="Buscar" class="form-control">
+
+                        </form>
+                        <button id="btn-buscar" class="btn btn-info mx-2">Buscar</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+                <!-- BODY -->
+                <div class="container-fluid ">
+                  <div class="row">
+                    <div class="row d-flex justify-content-center">
+                      <strong id="confirmar" class="col-3 alert alert-info d-none text-center"></strong>
+                    </div>
+
+                    <div class="row d-flex justify-content-center">
+                      <div class="col-12">
+                        <!-- FORMULARIO GUARDAR -->
+                        <form id="form-usuarios" class="row w-100 d-flex justify-content-center align-content-center ">
+                          <div id="modal-usuarios" class="col-8 ">
+
+                            <div class="col-lg-6 col-md-12 mx-3 ">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                <label for="nombre">Nombre</label>
+                              </div>
+
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+                                <label for="apellido">Apellidos</label>
+
+                              </div>
+
+                            </div>
+                          </div>
+                          <div id="modal-usuarios" class="col-8  ">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="number" class="form-control text-center" id="peso" placeholder="Peso">
+                                <label for="peso">Peso</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="number" class="form-control text-center" id="altura" placeholder="Altura">
+                                <label for="altura">Altura</label>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div id="modal-usuarios" class="col-8">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="sexo" placeholder="Sexo">
+                                <label for="sexo">Sexo</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="number" class="form-control text-center" id="años" placeholder="Años">
+
+                                <label for="años">Años</label>
+                              </div>
+
+                            </div>
+                          </div>
+                          <div id="modal-usuarios" class="col-8">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="number" class="form-control text-center" id="horasExperiencia"
+                                  placeholder="Horas de expeciencia">
+                                <label for="horasExperiencia">Horas de
+                                  experiencia</label>
+                              </div>
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control text-center" id="horasEntreno"
+                                  placeholder="Horas de entreno">
+                                <label for="horasEntreno">Horas de
+                                  entreno</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="modal-usuarios" class="col-8">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+
+                                <input type="text" class="form-control" id="lesionesPrevias"
+                                  placeholder="Lesiones previas">
+                                <label for="lesionesPrevias">Lesionesprevias</label>
+                              </div>
+
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="zonasAfectadas"
+                                  placeholder="Zonas afectadas">
+                                <label for="zonasAfectadas">Zonas afectadas
+                                </label>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div id="modal-usuarios" class="col-8 ">
+                            <div class="col-lg-6 col-md-12 mx-3">
+
+                              <div class="dropdown">
+
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                  id="dropdownMenuDeportes" data-bs-toggle="dropdown" aria-expanded="false">
+                                  DEPORTES
+                                </button>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuDeportes"
+                                  id="resDeportesFederados">
+
+                                </ul>
+
+                              </div>
+
+
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+
+                              <div class="dropdown">
+
+                                <button class="btn btn-secondary dropdown-toggle" type="button"
+                                  id="dropdownMenuActividades" data-bs-toggle="dropdown" aria-expanded="false">
+                                  ACTIVIDADES
+                                </button>
+                                <div class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#crudActividades"><i
+                                    class="bi bi-plus-circle"></i></div>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuActividades">
+
+                                  <ul class="d-flex " id="resActivadades">
+
+                                  </ul>
+
+                                </div>
+                              </div>
+                            </div>
+
+
+                          </div>
+                          <div class="col-8">
+                            <button id="btn-guardar-usuarios" type="button"
+                              class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+
+                          </div>
+
+
+                        </form>
+                        <!-- FORMULARIO ACTUALIZAR -->
+                        <form id="form-actualizar"
+                          class="row w-100 d-flex justify-content-center align-content-center d-none">
+                          <div id="modal-usuarios" class="col-8 ">
+                            <input type="hidden" id="id-U">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre-U" placeholder="Nombre">
+                                <label for="nombre">Nombre</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="apellido-U" placeholder="Apellidos">
+                                <label for="apellido">Apellidos</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="modal-usuarios" class="col-8 ">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="number" class="form-control text-center" id="peso-U" placeholder="Peso">
+                                <label for="peso">Peso</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="number" class="form-control text-center" id="altura-U"
+                                  placeholder="Altura">
+                                <label for="altura">Altura</label>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div id="modal-usuarios" class="col-8  ">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="sexo-U" placeholder="Sexo">
+                                <label for="sexo-U">Sexo</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="number" class="form-control text-center" id="años-U" placeholder="Años">
+                                <label for="años-U">Años</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="modal-usuarios" class="col-8 ">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+
+                                <input type="number" class="form-control" id="horasExperiencia-U">
+                                <label for="horasExperiencia-U">Horas de
+                                  experiencia</label>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="horasEntreno-U">
+                                <label for="horasEntreno-U">Horas de
+                                  entreno</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div id="modal-usuarios" class="col-8  ">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="lesionesPrevias-U"
+                                  placeholder="Lesiones previas">
+                                <label for="lesionesPrevias-U">Lesiones
+                                  previas</label>
+                              </div>
+
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="zonasAfectadas-U"
+                                  placeholder="Zonas afectadas">
+                                <label for="zonasAfectadas-U">Zonas afectadas
+                                </label>
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                          <div id="modal-usuarios" class="col-8 ">
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                  DEPORTES
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1"
+                                  id="resDeportesFederados">
+
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 mx-3">
+                              <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="listaAvtividades"
+                                  data-bs-toggle="dropdown" aria-expanded="false">
+                                  ACTIVIDADES
+                                </button>
+
+                                <div class="dropdown-menu" aria-labelledby="listaAvtividades">
+                                  <div class="d-flex justify-content-center" id="resActivadades-U"> </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <div class="col-12 ">
+
+                            <button id="btn-actualizar" type="submit"
+                              class="mt-4 col-auto rigth btn btn-success ">Actualizar</button>
+
+                          </div>
+
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-7 col-sm-12 dropdown-center bg-body-secondary rounded-2">
+        <div class=" btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Consultar Usuarios
+        </div>
+
+        <div id="libreta" class="text-center dropdown-menu">
+
+          <table id="resNombre" class="table  table-striped">
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Sexo</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>Actividades</th>
+                <th>Años</th>
+                <th>Horas entrenadas</th>
+                <th>Lesiones previas</th>
+                <th>Zonas afectadas</th>
+              </tr>
+            </thead>
+            <tbody id="resCRUD">
+
+            </tbody>
+          </table>
+
+        </div>
+
+        </button>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+

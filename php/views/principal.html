@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- js de popup -->
+    <script type="text/javascript" src="../js/popUp.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- estilos css -->
+    <link rel="stylesheet" href="/styles/main.css">
+    <!-- estilos boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>ErgoSense</title>
+    <link rel="icon" type="image/x-icon" href="/public/image_mini.png">
+
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+
+    <nav class="navbar  navbar-expand-md bg-body-secondary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-toggler"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-toggler">
+                <a class="navbar-brand" href="principal.html"><img class="logo"
+                        src="/public/Logo_Bioergon_sin_fondo.png" width="100" alt="logo de la empresa"></a>
+                <div class="navbar-nav d-flex justify-content-center align-items-center">
+                    <div class="dropdown-center">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Usuario
+                        </button>
+                        <ul class="dropdown-menu ">
+                            <li><a class=" dropdown-item" href="logIn.html">Cerrar sesion</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-info mx-2">Metadatos</button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <main id="panel-control">
+        <div class="container-fluid mt-5">
+            <!-- titulos encabezados -->
+            <div class="row text-center">
+                <div class="col-4">
+                    <h2>AGREGAR USUARIOS</h2>
+                </div>
+                <div class="col-7">
+                    <h2>CONSULTAR DATOS</h2>
+                </div>
+            </div>
+            <!-- row ususarios -->
+            <div class="border">
+                <div class="row text-center mt-4">
+                    <div class="col-md-4 col-sm-12">
+                        <!--BTN MODAL USUARIOS  -->
+                        <button id="btn-modal-usuarios" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#crudUsuarios">
+                            USUARIOS
+                        </button>
+
+                        <!-- MODAL USUARIOS -->
+                        <div class="modal fade modal-xl" id="crudUsuarios" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="crudUsuariosLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <!-- NAV -->
+                                        <div class="d-flex justify-content-end">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+
+                                        <nav class="navbar  navbar-expand-md bg-body-secondary mb-4">
+                                            <div class="container-fluid">
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#nav-toggler" aria-controls="navbarTogglerDemo01"
+                                                    aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse" id="nav-toggler">
+                                                    <a class="navbar-brand" href="../principal.html"><img class="logo"
+                                                            src="/public/Logo_Bioergon_sin_fondo.png" width="100"
+                                                            alt="logo de la empresa"></a>
+
+                                                    <h3 id="resp-ok" class="fw-bolder">USUARIOS</h3>
+                                                    <div
+                                                        class="navbar-nav d-flex justify-content-center align-items-center">
+                                                        <form action="" class="d-flex ">
+                                                            <input type="search" id="search" placeholder="Buscar"
+                                                                class="form-control">
+
+                                                        </form>
+                                                        <button id="btn-buscar"
+                                                            class="btn btn-info mx-2">Buscar</button>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <!-- BODY -->
+                                        <div class="container-fluid ">
+                                            <div class="row">
+                                                <div class="row d-flex justify-content-center">
+                                                    <strong id="confirmar"
+                                                        class="col-3 alert alert-info d-none text-center"></strong>
+                                                </div>
+
+                                                <div class="row d-flex justify-content-center">
+                                                    <div class="col-12">
+                                                        <!-- FORMULARIO GUARDAR -->
+                                                        <form id="form-usuarios"
+                                                            class="row w-100 d-flex justify-content-center align-content-center ">
+                                                            <div id="modal-usuarios" class="col-8 ">
+
+                                                                <div class="col-lg-6 col-md-12 mx-3 ">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="nombre" placeholder="Nombre">
+                                                                        <label for="nombre">Nombre</label>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="apellido" placeholder="Apellido">
+                                                                        <label for="apellido">Apellidos</label>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8  ">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="number"
+                                                                            class="form-control text-center" id="peso"
+                                                                            placeholder="Peso">
+                                                                        <label for="peso">Peso</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="number"
+                                                                            class="form-control text-center" id="altura"
+                                                                            placeholder="Altura">
+                                                                        <label for="altura">Altura</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="sexo" placeholder="Sexo">
+                                                                        <label for="sexo">Sexo</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="number"
+                                                                            class="form-control text-center" id="años"
+                                                                            placeholder="Años">
+
+                                                                        <label for="años">Años</label>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="number"
+                                                                            class="form-control text-center"
+                                                                            id="horasExperiencia"
+                                                                            placeholder="Horas de expeciencia">
+                                                                        <label for="horasExperiencia">Horas de
+                                                                            experiencia</label>
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text"
+                                                                            class="form-control text-center"
+                                                                            id="horasEntreno"
+                                                                            placeholder="Horas de entreno">
+                                                                        <label for="horasEntreno">Horas de
+                                                                            entreno</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+
+                                                                        <input type="text" class="form-control"
+                                                                            id="lesionesPrevias"
+                                                                            placeholder="Lesiones previas">
+                                                                        <label
+                                                                            for="lesionesPrevias">Lesionesprevias</label>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="zonasAfectadas"
+                                                                            placeholder="Zonas afectadas">
+                                                                        <label for="zonasAfectadas">Zonas afectadas
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8 ">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+
+                                                                    <div class="dropdown">
+
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownMenuDeportes"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            DEPORTES
+                                                                        </button>
+
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownMenuDeportes"
+                                                                            id="resDeportesFederados">
+
+                                                                        </ul>
+
+                                                                    </div>
+
+
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+
+                                                                    <div class="dropdown">
+
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownMenuActividades"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            ACTIVIDADES
+                                                                        </button>
+                                                                        <div class="btn btn-primary"
+                                                                            data-bs-toggle="modal"
+                                                                            data-bs-target="#crudActividades"><i
+                                                                                class="bi bi-plus-circle"></i></div>
+                                                                        <div class="dropdown-menu"
+                                                                            aria-labelledby="dropdownMenuActividades">
+
+                                                                            <ul class="d-flex " id="resActivadades">
+
+                                                                            </ul>
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                            <div class="col-8">
+                                                                <button id="btn-guardar-usuarios" type="button"
+                                                                    class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+
+                                                            </div>
+
+
+                                                        </form>
+                                                        <!-- FORMULARIO ACTUALIZAR -->
+                                                        <form id="form-actualizar"
+                                                            class="row w-100 d-flex justify-content-center align-content-center d-none">
+                                                            <div id="modal-usuarios" class="col-8 ">
+                                                                <input type="hidden" id="id-U">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="nombre-U" placeholder="Nombre">
+                                                                        <label for="nombre">Nombre</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="apellido-U" placeholder="Apellidos">
+                                                                        <label for="apellido">Apellidos</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8 ">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="number"
+                                                                            class="form-control text-center" id="peso-U"
+                                                                            placeholder="Peso">
+                                                                        <label for="peso">Peso</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="number"
+                                                                            class="form-control text-center"
+                                                                            id="altura-U" placeholder="Altura">
+                                                                        <label for="altura">Altura</label>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8  ">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="sexo-U" placeholder="Sexo">
+                                                                        <label for="sexo-U">Sexo</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="number"
+                                                                            class="form-control text-center" id="años-U"
+                                                                            placeholder="Años">
+                                                                        <label for="años-U">Años</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8 ">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+
+                                                                        <input type="number" class="form-control"
+                                                                            id="horasExperiencia-U">
+                                                                        <label for="horasExperiencia-U">Horas de
+                                                                            experiencia</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="horasEntreno-U">
+                                                                        <label for="horasEntreno-U">Horas de
+                                                                            entreno</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div id="modal-usuarios" class="col-8  ">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="lesionesPrevias-U"
+                                                                            placeholder="Lesiones previas">
+                                                                        <label for="lesionesPrevias-U">Lesiones
+                                                                            previas</label>
+                                                                    </div>
+
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="form-floating mb-3">
+                                                                        <input type="text" class="form-control"
+                                                                            id="zonasAfectadas-U"
+                                                                            placeholder="Zonas afectadas">
+                                                                        <label for="zonasAfectadas-U">Zonas afectadas
+                                                                        </label>
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div id="modal-usuarios" class="col-8 ">
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownMenuButton1"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            DEPORTES
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownMenuButton1"
+                                                                            id="resDeportesFederados">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-md-12 mx-3">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="listaAvtividades"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            ACTIVIDADES
+                                                                        </button>
+
+                                                                        <div class="dropdown-menu"
+                                                                            aria-labelledby="listaAvtividades">
+                                                                            <div class="d-flex justify-content-center"
+                                                                                id="resActivadades-U"> </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                            <div class="col-12 ">
+
+                                                                <button id="btn-actualizar" type="submit"
+                                                                    class="mt-4 col-auto rigth btn btn-success ">Actualizar</button>
+
+                                                            </div>
+
+
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 col-sm-12 dropdown-center bg-body-secondary rounded-2">
+                        <div class=" btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Consultar Usuarios
+                        </div>
+
+                        <div id="libreta" class="text-center dropdown-menu">
+
+                            <table id="resNombre" class="table  table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Sexo</th>
+                                        <th>Peso</th>
+                                        <th>Altura</th>
+                                        <th>Actividades</th>
+                                        <th>Años</th>
+                                        <th>Horas entrenadas</th>
+                                        <th>Lesiones previas</th>
+                                        <th>Zonas afectadas</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="resCRUD">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- row actividades -->
+            <div class="border">
+                <div class="row text-center mt-4">
+                    <div class="col-md-4 col-sm-12">
+                        <!-- MODAL ACTIVIDADES -->
+                        <button id="btn-modal-actividades" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#crudActividades">
+                            ACTIVIDADES
+                        </button>
+
+                        <!-- MODAL ACTIVIDADES -->
+                        <div class="modal fade modal-xl" id="crudActividades" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="crudActividadesLabel"
+                            aria-hidden="false">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <!-- BODY ACTIVIDADES -->
+
+                                    <div class="modal-body">
+                                        <!-- NAV ACTIVIDADES -->
+                                        <div class="d-flex justify-content-end">
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <nav class="navbar  navbar-expand-md bg-body-secondary w-100">
+                                            <div class="container-fluid">
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#nav-toggler" aria-controls="navbarTogglerDemo01"
+                                                    aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse" id="nav-toggler">
+                                                    <a class="navbar-brand" href="#"><img class="logo"
+                                                            src="/public/Logo_Bioergon_sin_fondo.png" width="100"
+                                                            alt="logo de la empresa"></a>
+                                                    <h3 class="fw-bolder">ACTIVIDADES</h3>
+                                                    <div
+                                                        class="navbar-nav d-flex justify-content-center align-items-center">
+                                                        <form action="" class="d-flex ">
+                                                            <input type="search" id="search" placeholder="Buscar"
+                                                                class="form-control">
+
+                                                        </form>
+                                                        <button id="btn-metadatos"
+                                                            class="btn btn-info mx-2">Metadatos</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <div class="container-fluid ">
+                                            <div class="row d-flex justify-content-center">
+                                                <strong id="confirmar"
+                                                    class="col-3 alert alert-info d-none text-center"></strong>
+                                            </div>
+                                            <div class="row d-flex justify-content-center">
+                                                <!-- FORMULARIO GUARDAR ACTIVIDADES -->
+                                                <div class="col-lg-12">
+                                                    <form id="form-actividades"
+                                                        class="row w-100 d-flex justify-content-center">
+                                                        <div class="col-lg-6 col-md-12 mt-5 mx-3 ">
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    id="nombreActividades" placeholder="Nombre">
+                                                                <label for="nombre">Nombre</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-3 col-lg-6 d-flex justify-content-center">
+                                                            <div class="col-lg-6 col-md-12 mx-3 ">
+                                                                <div class="dropdown">
+                                                                    <button class="btn btn-secondary dropdown-toggle"
+                                                                        type="button" id="dropdownUsuarios"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        USUARIOS
+                                                                    </button>
+                                                                    <ul class="dropdown-menu "
+                                                                        aria-labelledby="dropdownUsuarios"
+                                                                        id="resUsuariosActividades">
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12 mx-3 ">
+                                                                <div class="dropdown">
+                                                                    <button class="btn btn-secondary dropdown-toggle"
+                                                                        type="button" id="dropdownUsuarios"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        ACCIONES
+                                                                    </button>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="dropdownUsuarios"
+                                                                        id="resAcciones">
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button id="btn-guardar" type="button"
+                                                                class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+                                                        </div>
+
+                                                    </form>
+                                                    <!-- FORMULARIO ACTUALIZAR ACTIVIDADES -->
+                                                    <form id="form-actualizar-actividades"
+                                                        class="row w-100 d-flex justify-content-center d-none">
+                                                        <input id="idActividades-U" type="hidden" value="">
+                                                        <div class="col-lg-6 col-md-12 mt-5 mx-3 ">
+                                                            <div class="form-floating mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    id="nombreActividad-U" placeholder="Nombre">
+                                                                <label for="nombre">Nombre</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="mt-3 col-lg-6 d-flex justify-content-center">
+                                                            <div class="col-lg-6 col-md-12 mx-3 ">
+                                                                <div class="dropdown">
+                                                                    <button class="btn btn-secondary dropdown-toggle"
+                                                                        type="button" id="dropdownUsuarios"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        USUARIOS
+                                                                    </button>
+                                                                    <ul class="dropdown-menu "
+                                                                        aria-labelledby="dropdownUsuarios"
+                                                                        id="resUsuariosActividades-U">
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-lg-6 col-md-12 mx-3 ">
+                                                                <div class="dropdown">
+                                                                    <button class="btn btn-secondary dropdown-toggle"
+                                                                        type="button" id="dropdownUsuarios"
+                                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        ACCIONES
+                                                                    </button>
+                                                                    <ul class="dropdown-menu"
+                                                                        aria-labelledby="dropdownUsuarios"
+                                                                        id="resAcciones">
+
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button id="btn-actualizar-actividades" type="button"
+                                                                class="mt-4 col-auto rigth btn btn-success">Actualizar</button>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CONSULTA DATOS ACTIVIDADES -->
+                    <div class="col-md-7 col-sm-12 dropdown-center bg-body-secondary rounded-2">
+                        <div class=" btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Consultar Actividades
+                        </div>
+
+                        <div id="libreta" class="col-12 dropdown-menu">
+
+                            <table id="resNombre" class="table table-bordered table-striped text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Usuarios</th>
+                                        <th>Acciones</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="resActividades">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- row acciones -->
+            <div class="border">
+                <div class="row text-center mt-4">
+                    <div class="col-md-4 col-sm-12">
+                        <!-- MODAL ACCIONES -->
+                        <button id="btn-modal-acciones" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#crudAcciones">
+                            ACCIONES
+                        </button>
+
+                        <!-- MODAL ACCIONES -->
+                        <div class="modal fade modal-xl" id="crudAcciones" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="crudAccionesLabel"
+                            aria-hidden="false">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <!-- NAV ACCIONES -->
+                                        <nav class="navbar  navbar-expand-md bg-body-secondary w-100">
+                                            <div class="container-fluid">
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#nav-toggler" aria-controls="navbarTogglerDemo01"
+                                                    aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse" id="nav-toggler">
+                                                    <a class="navbar-brand" href="#"><img class="logo"
+                                                            src="/public/Logo_Bioergon_sin_fondo.png" width="100"
+                                                            alt="logo de la empresa"></a>
+                                                    <p class="fw-bolder">ACCIONES</p>
+                                                    <div
+                                                        class="navbar-nav d-flex justify-content-center align-items-center">
+                                                        <form action="" class="d-flex ">
+                                                            <input type="search" id="search" placeholder="Buscar"
+                                                                class="form-control">
+
+                                                        </form>
+                                                        <button class="btn btn-info mx-2">Metadatos</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- BODY ACCIONES -->
+
+                                    <div class="modal-body">
+                                        <div class="container-fluid ">
+                                            <div class="row d-flex justify-content-center">
+                                                <strong id="confirmar"
+                                                    class="col-3 alert alert-info d-none text-center"></strong>
+                                            </div>
+                                            <div class="row d-flex justify-content-center">
+                                                <!-- FORMULARIO GUARDAR ACCIONES -->
+                                                <div class="col-8">
+                                                    <form id="form-acciones"
+                                                        class="row w-100 d-flex justify-content-center align-content-center ">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-center align-content-center">
+                                                            <div class="col-6 mx-3">
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control"
+                                                                        id="nombreAccion" placeholder="Nombre">
+                                                                    <label for="nombreAcciones">Nombre</label>
+                                                                </div>
+                                                                <div class="mt-3 col-12 d-flex justify-content-between">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownUsuarios"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            ACTIVIDADES
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownUsuarios"
+                                                                            id="resUsuarios">
+
+                                                                        </ul>
+                                                                    </div>
+
+
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownUsuarios"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            V.ANATOMICA
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownUsuarios"
+                                                                            id="resAcciones">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button id="btn-guardar-accion" type="button"
+                                                                class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+                                                        </div>
+
+                                                    </form>
+                                                    <!-- FORMULARIO ACTUALIZAR ACCIONES -->
+                                                    <form id="form-actualizar-acciones"
+                                                        class="row w-100 d-flex justify-content-center align-content-center d-none">
+                                                        <div
+                                                            class="col-8 d-flex justify-content-center align-content-center">
+                                                            <input type="hidden" id="idAccion-U">
+                                                            <div class="col-6 mx-3">
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control"
+                                                                        id="nombreAccion-U" placeholder="Nombre">
+                                                                    <label for="nombre">Nombre</label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <div class="mt-3 col-12 d-flex justify-content-between">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownUsuarios"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            ACTIVIDADES
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownUsuarios"
+                                                                            id="resUsuarios-U">
+
+                                                                        </ul>
+                                                                    </div>
+
+
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownUsuarios"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            V.ANATOMICA
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownUsuarios"
+                                                                            id="resAcciones-U">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button id="btn-actualizar-acciones" type="submit"
+                                                                class="mt-4 col-auto rigth btn btn-success">Atualizar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CONSULTA DATOS ACCIONES -->
+                    <div class="col-md-7 col-sm-12 dropdown-center bg-body-secondary rounded-2">
+                        <div class=" btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Consultar Acciones
+                        </div>
+
+                        <div id="libreta" class="row col-12 dropdown-menu">
+
+                            <table id="resNombre" class="table table-bordered table-striped text-center">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Actividades</th>
+                                        <th>V.Anatómicas</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="resAcciones">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- row variable anatómica -->
+            <div class="border">
+                <div class="row text-center mt-4">
+                    <div class="col-md-4 col-sm-12">
+                        <!-- MODAL V.Anatómica -->
+                        <button id="btn-modal-vAnatomica" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#crudVAnatomica">
+                            V.ANATÓMICA
+                        </button>
+
+                        <!-- MODAL V.ANATÓMICA -->
+                        <div class="modal fade modal-xl" id="crudVAnatomica" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="crudVAnatomicaLabel"
+                            aria-hidden="false">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <!-- NAV V.ANATÓMICA -->
+                                        <nav class="navbar  navbar-expand-md bg-body-secondary w-100">
+                                            <div class="container-fluid">
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#nav-toggler" aria-controls="navbarTogglerDemo01"
+                                                    aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse" id="nav-toggler">
+                                                    <a class="navbar-brand" href="#"><img class="logo"
+                                                            src="/public/Logo_Bioergon_sin_fondo.png" width="100"
+                                                            alt="logo de la empresa"></a>
+                                                    <p class="fw-bolder">V.ANATÓMICA</p>
+                                                    <div
+                                                        class="navbar-nav d-flex justify-content-center align-items-center">
+                                                        <form action="" class="d-flex ">
+                                                            <input type="search" id="search" placeholder="Buscar"
+                                                                class="form-control">
+
+                                                        </form>
+                                                        <button class="btn btn-info mx-2">Metadatos</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- BODY V.ANATÓMICA -->
+
+                                    <div class="modal-body">
+                                        <div class="container-fluid ">
+                                            <div class="row d-flex justify-content-center">
+                                                <strong id="confirmar"
+                                                    class="col-3 alert alert-info d-none text-center"></strong>
+                                            </div>
+                                            <div class="row d-flex justify-content-center">
+                                                <!-- FORMULARIO GUARDAR V.ANATÓMICA -->
+                                                <div class="col-8">
+                                                    <form id="form-vAnatomica"
+                                                        class="row w-100 d-flex justify-content-center align-content-center ">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-center align-content-center">
+                                                            <div class="col-6 mx-3">
+
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control" id="nombre"
+                                                                        placeholder="Nombre">
+                                                                    <label for="nombre">Nombre</label>
+                                                                </div>
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control" id="tipo"
+                                                                        placeholder="Tipo">
+                                                                    <label for="tipo">Tipo</label>
+                                                                </div>
+
+                                                                <div class="mt-3 col-12 d-flex justify-content-between">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownAcciones"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            ACCIONES
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownAcciones"
+                                                                            id="resAcciones">
+
+                                                                        </ul>
+                                                                    </div>
+
+
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdown_V_ET"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            VARIABLES E.T
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdown_V_ET"
+                                                                            id="res_V_ET">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button type="button"
+                                                                class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+                                                        </div>
+
+                                                    </form>
+                                                    <!-- FORMULARIO ACTUALIZAR V.ANATÓMICA -->
+                                                    <form id="form-actualizar"
+                                                        class="row w-100 d-flex justify-content-center align-content-center d-none">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-center align-content-center">
+                                                            <div class="col-6 mx-3">
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control"
+                                                                        id="nombre-U" placeholder="Nombre">
+                                                                    <label for="nombre">Nombre</label>
+                                                                </div>
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control" id="tipo-U" placeholder="Tipo">
+                                                                    <label for="tipo-U">Tipo</label>
+                                                                </div>
+
+                                                                <div class="mt-3 col-12 d-flex justify-content-between">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownAcciones-U"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            ACCIONES
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownAcciones"
+                                                                            id="resAcciones-U">
+
+                                                                        </ul>
+                                                                    </div>
+
+
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdown_V_ET-U"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            V.ANATOMICA
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdown_V_ET-U"
+                                                                            id="res_V_ET-U">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button id="btn-actualizar" type="submit"
+                                                                class="mt-4 col-auto rigth btn btn-success">Atualizar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CONSULTA DATOS V.ANATÓMICA -->
+                    <div class="col-md-7 col-sm-12 dropdown-center bg-body-secondary rounded-2">
+                        <div class=" btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Consultar V.Anatómitas
+                        </div>
+
+                        <div id="libreta" class="row col-12 dropdown-menu">
+
+                            <table id="resNombre" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Tipo</th>
+                                        <th>V.Anatómicas</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="resCRUD">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- row espacio temporal -->
+            <div class="border">
+                <div class="row text-center mt-4">
+                    <div class="col-md-4 col-sm-12">
+                        <!-- MODAL varieable espacio temporal -->
+                        <button id="btn-modal-v_E_T" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#crudV_E_T">
+                            VARIABLE E.T
+                        </button>
+
+                        <!-- MODAL V.ESPACIO TEMPORAL -->
+                        <div class="modal fade modal-xl" id="crudV_E_T" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="crudV_E_TLabel" aria-hidden="false">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <!-- NAV V.ESPACIO TEMPORAL  -->
+                                        <nav class="navbar  navbar-expand-md bg-body-secondary w-100">
+                                            <div class="container-fluid">
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#nav-toggler" aria-controls="navbarTogglerDemo01"
+                                                    aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse" id="nav-toggler">
+                                                    <a class="navbar-brand" href="#"><img class="logo"
+                                                            src="/public/Logo_Bioergon_sin_fondo.png" width="100"
+                                                            alt="logo de la empresa"></a>
+                                                    <p class="fw-bolder">V.ESPACIO TEMPORAL</p>
+                                                    <div
+                                                        class="navbar-nav d-flex justify-content-center align-items-center">
+                                                        <form action="" class="d-flex ">
+                                                            <input type="search" id="search" placeholder="Buscar"
+                                                                class="form-control">
+
+                                                        </form>
+                                                        <button class="btn btn-info mx-2">Metadatos</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- BODY V.ESPACIO TEMPORAL -->
+
+                                    <div class="modal-body">
+                                        <div class="container-fluid ">
+                                            <div class="row d-flex justify-content-center">
+                                                <strong id="confirmar"
+                                                    class="col-3 alert alert-info d-none text-center"></strong>
+                                            </div>
+                                            <div class="row d-flex justify-content-center">
+                                                <!-- FORMULARIO GUARDAR  V.ESPACIO TEMPORAL-->
+                                                <div class="col-8">
+                                                    <form id="form-vEspacioTemporal"
+                                                        class="row w-100 d-flex justify-content-center align-content-center ">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-center align-content-center">
+                                                            <div class="col-6 mx-3">
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                                                    <label for="nombre">Nombre</label>
+                                                                </div>
+                                                                
+                                                                <div class="mt-3 col-12 d-flex justify-content-between">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownVAnatomica"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            V.ANATÓMICA
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownVAnatomica"
+                                                                            id="resVAnatomica">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button type="button"
+                                                                class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+                                                        </div>
+
+                                                    </form>
+                                                    <!-- FORMULARIO ACTUALIZAR  V.ESPACIO TEMPORAL -->
+                                                    <form id="form-actualizar"
+                                                        class="row w-100 d-flex justify-content-center align-content-center d-none">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-center align-content-center">
+                                                            <div class="col-6 mx-3">
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control" id="nombre-U" placeholder="Nombre">
+                                                                    <label for="nombre-U">Nombre</label>
+                                                                </div>
+                                                                
+                                                                <div class="mt-3 col-12 d-flex justify-content-between">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownVAnatomica-U"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            V.ANATÓMICA
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownVAnatomica-U"
+                                                                            id="resVAnatomica-U">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button id="btn-actualizar" type="submit"
+                                                                class="mt-4 col-auto rigth btn btn-success">Atualizar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CONSULTA DATOS  V.ESPACIO TEMPORAL -->
+                    <div class="col-md-7 col-sm-12 dropdown-center bg-body-secondary rounded-2">
+                        <div class=" btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Consultar V.Espacio Temporal
+                        </div>
+
+                        <div id="libreta" class="row col-12 dropdown-menu">
+
+                            <table id="resNombre" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Variable Anatomica</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="resCRUD">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+            <!-- row espacio datos -->
+            <div class="border">
+                <div class="row text-center mt-4">
+                    <div class="col-md-4 col-sm-12">
+                        <!-- MODAL DATOS -->
+                        <button id="btn-modal-Datos" type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#crudDatos">
+                            DATOS
+                        </button>
+
+                        <!-- MODAL DATOS -->
+                        <div class="modal fade modal-xl" id="crudDatos" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="crudDatosLabel" aria-hidden="false">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <!-- NAV DATO  -->
+                                        <nav class="navbar  navbar-expand-md bg-body-secondary w-100">
+                                            <div class="container-fluid">
+                                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#nav-toggler" aria-controls="navbarTogglerDemo01"
+                                                    aria-expanded="false" aria-label="Toggle navigation">
+                                                    <span class="navbar-toggler-icon"></span>
+                                                </button>
+
+                                                <div class="collapse navbar-collapse" id="nav-toggler">
+                                                    <a class="navbar-brand" href="#"><img class="logo"
+                                                            src="/public/Logo_Bioergon_sin_fondo.png" width="100"
+                                                            alt="logo de la empresa"></a>
+                                                    <p class="fw-bolder">DATOS</p>
+                                                    <div
+                                                        class="navbar-nav d-flex justify-content-center align-items-center">
+                                                        <form action="" class="d-flex ">
+                                                            <input type="search" id="search" placeholder="Buscar"
+                                                                class="form-control">
+
+                                                        </form>
+                                                        <button class="btn btn-info mx-2">Metadatos</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <!-- BODY DATOS -->
+
+                                    <div class="modal-body">
+                                        <div class="container-fluid ">
+                                            <div class="row d-flex justify-content-center">
+                                                <strong id="confirmar"
+                                                    class="col-3 alert alert-info d-none text-center"></strong>
+                                            </div>
+                                            <div class="row d-flex justify-content-center">
+                                                <!-- FORMULARIO GUARDAR  DATOS-->
+                                                <div class="col-8">
+                                                    <form id="form-datos"
+                                                        class="row w-100 d-flex justify-content-center align-content-center ">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-center align-content-center">
+                                                            <div class="col-6 mx-3">
+                                                                <div class="form-floating mb-3">
+                                                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                                                    <label for="nombre">Nombre</label>
+                                                                </div>
+                                                                
+                                                                <div class="mt-3 col-12 d-flex justify-content-between">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownColecciones"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            COLECCIONES
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownColecciones"
+                                                                            id="resColecciones">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownDatos"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            DATOS
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownDatos"
+                                                                            id="resDatos">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button type="button"
+                                                                class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
+                                                        </div>
+
+                                                    </form>
+                                                    <!-- FORMULARIO ACTUALIZAR  V.ESPACIO TEMPORAL -->
+                                                    <form id="form-actualizar"
+                                                        class="row w-100 d-flex justify-content-center align-content-center d-none">
+                                                        <div
+                                                            class="col-12 d-flex justify-content-center align-content-center">
+                                                            <div class="col-6 mx-3">
+                                                                <label for="nombre-U"
+                                                                    class="form-label mt-3 small">Nombre</label>
+                                                                <input type="text" class="form-control" id="nombre-U">
+                                                                <div class="mt-3 col-12 d-flex justify-content-between">
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownColecciones-U"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            COLECCIONES
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownColecciones-U"
+                                                                            id="resColecciones-U">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                    <div class="dropdown">
+                                                                        <button
+                                                                            class="btn btn-secondary dropdown-toggle"
+                                                                            type="button" id="dropdownDatos-U"
+                                                                            data-bs-toggle="dropdown"
+                                                                            aria-expanded="false">
+                                                                            DATOS
+                                                                        </button>
+                                                                        <ul class="dropdown-menu"
+                                                                            aria-labelledby="dropdownDatos-U"
+                                                                            id="resDatos-U">
+
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12 d-flex justify-content-center">
+                                                            <button id="btn-actualizar" type="submit"
+                                                                class="mt-4 col-auto rigth btn btn-success">Atualizar</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CONSULTA DATOS  V.ESPACIO TEMPORAL -->
+                    <div class="col-md-7 col-sm-12 dropdown-center bg-body-secondary rounded-2">
+                        <div class=" btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Consultar Datos
+                        </div>
+
+                        <div id="libreta" class="row col-12 dropdown-menu">
+
+                            <table id="resNombre" class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nombre</th>
+                                        <th>Colecciones</th>
+                                        <th>Datos</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="resCRUD">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- <script src="/js/search-crud-actividades.js"></script> -->
+    <script src="/js/search-crud-usuarios.js"></script>
+    <!-- <script src="/js/search-crud-acciones.js"></script> -->
+    <script src="/js/disabled.js"></script>
+</body>
+
+</html>
