@@ -1,11 +1,6 @@
 $(document).ready(() => {
     //select
-
-    // let usu = [];
-    // $('#checkbox').each(function () {
-    //     usu.push($(this).val())
-    // })
-    // console.log(usu);
+    
     function get() {
 
         $.ajax({
@@ -13,18 +8,21 @@ $(document).ready(() => {
             url: "http://localhost:8080/Actividades/listaActividad",
 
             success: function (response) {
-
-                console.log(response)
+           console.log(response)
                 let actividades = response;
                 templateActividades = ``;
+               
                 actividades.forEach(actividad => {
+                     
                     templateActividades += `
                    
-                      <tr id="${actividad.id}">
-                      <td>${actividad.id}</td>
-                      <td>${actividad.nombre}</td>
+                      <tr id="${actividad.idAct}">
+                      <td>${actividad.idAct}</td>
+                      <td>${actividad.nombreAct}</td>
                       <td>${actividad.usuariosList}</td>
                       <td>${actividad.accionesList}</td>
+                     
+                      
                       
                       
                       <td><button class="btn btn-danger delete-actividad" >Eliminar</button></td>
@@ -43,41 +41,45 @@ $(document).ready(() => {
     }
     get()
 
-    // // // // LLAMADA USUARIOS
-    // let templateUsuario = ``;
-    // $.ajax({
-    //     type: "GET",
-    //     url: "http://localhost:8080/Usuarios/listaUsuario",
-    //     success: function (response) {
+       //LLAMADA USUARIOS
+     let templateUsuario = ``;
+     $.ajax({
+         type: "GET",
+         url: "http://localhost:8080/Usuarios/listaUsuario",
+         success: function (response) {
 
 
-    //         response.forEach(elemento => {
+             response.forEach(elemento => {
 
-    //             templateUsuario += `
-    //        <li>${elemento.name}<input class="mx-2"  type="checkbox" name="usuarios[]" id="checkbox" value=${elemento.name}></li>
+                 templateUsuario += `
+            <li>${elemento.name}<input class="mx-2"  type="checkbox" name="usuarios[]" id="checkbox" value=${elemento.name}></li>
 
-    //            `
-    //         })
-    //         $('#resUsuariosActividades').html(templateUsuario);
-    //     }
+                `
+             })
+             $('#resUsuariosActividades').html(templateUsuario);
+         }
 
-    // });
+     });
 
 
     //insert
 
-    $('#btn-guardar').click(function (e) {
+    $('#btn-guardar-actividades').click(function (e) {
         e.preventDefault();
 
-        // let usuariosList = [];
-        // $('#checkbox').each(function () {
-        //     usuariosList.push($(this).val())
-        // })
+            let resUsuario = [];
+           $('#checkbox:checked').each(function () {
+               resUsuario.push({lastName:$(this).val()})
+           
+           })
+       
         let postData = {
-            nombre: $('#nombreActividades').val(),
-            // usuariosList: usuariosList
+            nombreAct: $('#nombreActividades').val(),
+             usuariosList: resUsuario
+
+
         }
-        console.log(postData)
+
         $.ajax({
             url: "http://localhost:8080/Actividades/crearActividad",
             data: postData,
@@ -85,7 +87,7 @@ $(document).ready(() => {
             type: "POST",
             contentType: 'application/json',
             success: function (response) {
-                console.log(response)
+
                 if (response) {
                     alert("guardado con exito")
                     location.reload()
@@ -162,11 +164,11 @@ $(document).ready(() => {
             success: function (response) {
                 const actividades = response
 
-                console.log(actividades.nombre)
 
-                // $('#resUsuariosActividades-U').html(templateUsuario)
-                $('#nombreActividad-U').val(actividades.nombre)
-                $('#idActividades-U').val(actividades.id)
+
+                $('#resUsuariosActividades-U').html(templateUsuario)
+                $('#nombreActividad-U').val(actividades.nombreAct)
+                $('#idActividades-U').val(actividades.idAct)
 
             }
 
@@ -183,7 +185,7 @@ $(document).ready(() => {
         // })
         let id = $('#idActividades-U').val();
         upDate = {
-            nombre: $('#nombreActividad-U').val()
+            nombreAct: $('#nombreActividad-U').val()
         }
         $.ajax({
             type: "PUT",

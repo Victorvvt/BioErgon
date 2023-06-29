@@ -55,7 +55,7 @@
             <!-- titulos encabezados -->
             <div class="row text-center">
                 <div class="col-4">
-                    <h2>AGREGAR USUARIOS</h2>
+                    <h2>AGREGAR REGISTROS</h2>
                 </div>
                 <div class="col-7">
                     <h2>CONSULTAR DATOS</h2>
@@ -100,14 +100,9 @@
                                                     <h3 id="resp-ok" class="fw-bolder">USUARIOS</h3>
                                                     <div
                                                         class="navbar-nav d-flex justify-content-center align-items-center">
-                                                        <form action="" class="d-flex ">
-                                                            <input type="search" id="search" placeholder="Buscar"
-                                                                class="form-control">
 
-                                                        </form>
-                                                        <button id="btn-buscar"
-                                                            class="btn btn-info mx-2">Buscar</button>
-
+                                                        <button id="btn-metadatos"
+                                                            class="btn btn-info mx-2">Metadatos</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -148,19 +143,21 @@
                                                             <div id="modal-usuarios" class="col-8  ">
                                                                 <div class="col-lg-6 col-md-12 mx-3">
                                                                     <div class="form-floating mb-3">
-                                                                        <input type="number"
-                                                                            class="form-control text-center" id="peso"
-                                                                            placeholder="Peso">
-                                                                        <label for="peso">Peso</label>
+                                                                        <input type="text"
+                                                                            class="form-control text-center" id="dni"
+                                                                            placeholder="dni">
+                                                                        <label for="dni">DNI</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12 mx-3">
                                                                     <div class="form-floating mb-3">
                                                                         <input type="number"
-                                                                            class="form-control text-center" id="altura"
-                                                                            placeholder="Altura">
-                                                                        <label for="altura">Altura</label>
+                                                                            class="form-control text-center" id="años"
+                                                                            placeholder="Años">
+
+                                                                        <label for="años">Años</label>
                                                                     </div>
+
                                                                 </div>
 
                                                             </div>
@@ -175,23 +172,19 @@
                                                                 <div class="col-lg-6 col-md-12 mx-3">
                                                                     <div class="form-floating mb-3">
                                                                         <input type="number"
-                                                                            class="form-control text-center" id="años"
-                                                                            placeholder="Años">
-
-                                                                        <label for="años">Años</label>
+                                                                            class="form-control text-center" id="altura"
+                                                                            placeholder="Altura">
+                                                                        <label for="altura">Altura</label>
                                                                     </div>
-
                                                                 </div>
                                                             </div>
                                                             <div id="modal-usuarios" class="col-8">
                                                                 <div class="col-lg-6 col-md-12 mx-3">
                                                                     <div class="form-floating mb-3">
                                                                         <input type="number"
-                                                                            class="form-control text-center"
-                                                                            id="horasExperiencia"
-                                                                            placeholder="Horas de expeciencia">
-                                                                        <label for="horasExperiencia">Horas de
-                                                                            experiencia</label>
+                                                                            class="form-control text-center" id="peso"
+                                                                            placeholder="Peso">
+                                                                        <label for="peso">Peso</label>
                                                                     </div>
 
 
@@ -231,28 +224,7 @@
 
                                                             </div>
                                                             <div id="modal-usuarios" class="col-8 ">
-                                                                <div class="col-lg-6 col-md-12 mx-3">
 
-                                                                    <div class="dropdown">
-
-                                                                        <button
-                                                                            class="btn btn-secondary dropdown-toggle"
-                                                                            type="button" id="dropdownMenuDeportes"
-                                                                            data-bs-toggle="dropdown"
-                                                                            aria-expanded="false">
-                                                                            DEPORTES
-                                                                        </button>
-
-                                                                        <ul class="dropdown-menu"
-                                                                            aria-labelledby="dropdownMenuDeportes"
-                                                                            id="resDeportesFederados">
-
-                                                                        </ul>
-
-                                                                    </div>
-
-
-                                                                </div>
                                                                 <div class="col-lg-6 col-md-12 mx-3">
 
                                                                     <div class="dropdown">
@@ -312,21 +284,20 @@
                                                             <div id="modal-usuarios" class="col-8 ">
                                                                 <div class="col-lg-6 col-md-12 mx-3">
                                                                     <div class="form-floating mb-3">
-                                                                        <input type="number"
-                                                                            class="form-control text-center" id="peso-U"
-                                                                            placeholder="Peso">
-                                                                        <label for="peso">Peso</label>
+                                                                        <input type="text"
+                                                                            class="form-control text-center" id="dni-U"
+                                                                            placeholder="DNI">
+                                                                        <label for="dni">DNI</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12 mx-3">
                                                                     <div class="form-floating mb-3">
                                                                         <input type="number"
-                                                                            class="form-control text-center"
-                                                                            id="altura-U" placeholder="Altura">
-                                                                        <label for="altura">Altura</label>
+                                                                            class="form-control text-center" id="años-U"
+                                                                            placeholder="Años">
+                                                                        <label for="años-U">Años</label>
                                                                     </div>
                                                                 </div>
-
                                                             </div>
                                                             <div id="modal-usuarios" class="col-8  ">
                                                                 <div class="col-lg-6 col-md-12 mx-3">
@@ -339,9 +310,9 @@
                                                                 <div class="col-lg-6 col-md-12 mx-3">
                                                                     <div class="form-floating mb-3">
                                                                         <input type="number"
-                                                                            class="form-control text-center" id="años-U"
-                                                                            placeholder="Años">
-                                                                        <label for="años-U">Años</label>
+                                                                            class="form-control text-center"
+                                                                            id="altura-U" placeholder="Altura">
+                                                                        <label for="altura">Altura</label>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -350,9 +321,8 @@
                                                                     <div class="form-floating mb-3">
 
                                                                         <input type="number" class="form-control"
-                                                                            id="horasExperiencia-U">
-                                                                        <label for="horasExperiencia-U">Horas de
-                                                                            experiencia</label>
+                                                                            id="peso-U">
+                                                                        <label for="peso-U">Peso</label>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-lg-6 col-md-12 mx-3">
@@ -389,27 +359,12 @@
                                                             </div>
 
                                                             <div id="modal-usuarios" class="col-8 ">
-                                                                <div class="col-lg-6 col-md-12 mx-3">
-                                                                    <div class="dropdown">
-                                                                        <button
-                                                                            class="btn btn-secondary dropdown-toggle"
-                                                                            type="button" id="dropdownMenuButton1"
-                                                                            data-bs-toggle="dropdown"
-                                                                            aria-expanded="false">
-                                                                            DEPORTES
-                                                                        </button>
-                                                                        <ul class="dropdown-menu"
-                                                                            aria-labelledby="dropdownMenuButton1"
-                                                                            id="resDeportesFederados">
 
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
                                                                 <div class="col-lg-6 col-md-12 mx-3">
                                                                     <div class="dropdown">
                                                                         <button
                                                                             class="btn btn-secondary dropdown-toggle"
-                                                                            type="button" id="listaAvtividades"
+                                                                            type="button" id="listaAvtividades-U"
                                                                             data-bs-toggle="dropdown"
                                                                             aria-expanded="false">
                                                                             ACTIVIDADES
@@ -451,7 +406,13 @@
                         </div>
 
                         <div id="libreta" class="text-center dropdown-menu">
+                            <div class="navbar-nav d-flex justify-content-center align-items-center">
+                                <form action="" class="d-flex ">
+                                    <input type="search" id="search" placeholder="Buscar" class="form-control">
 
+                                </form>
+
+                            </div>
                             <table id="resNombre" class="table  table-striped">
                                 <thead>
                                     <tr>
@@ -519,11 +480,7 @@
                                                     <h3 class="fw-bolder">ACTIVIDADES</h3>
                                                     <div
                                                         class="navbar-nav d-flex justify-content-center align-items-center">
-                                                        <form action="" class="d-flex ">
-                                                            <input type="search" id="search" placeholder="Buscar"
-                                                                class="form-control">
 
-                                                        </form>
                                                         <button id="btn-metadatos"
                                                             class="btn btn-info mx-2">Metadatos</button>
                                                     </div>
@@ -579,7 +536,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="col-12 d-flex justify-content-center">
-                                                            <button id="btn-guardar" type="button"
+                                                            <button id="btn-guardar-actividades" type="button"
                                                                 class="mt-4 col-auto rigth btn btn-primary">Guardar</button>
                                                         </div>
 
@@ -649,6 +606,13 @@
                         </div>
 
                         <div id="libreta" class="col-12 dropdown-menu">
+                            <div class="navbar-nav d-flex justify-content-center align-items-center mb-3">
+                                <form action="" class="d-flex ">
+                                    <input type="search" id="search" placeholder="Buscar" class="form-control">
+
+                                </form>
+
+                            </div>
 
                             <table id="resNombre" class="table table-bordered table-striped text-center">
                                 <thead>
@@ -853,7 +817,13 @@
                         </div>
 
                         <div id="libreta" class="row col-12 dropdown-menu">
+                            <div class="navbar-nav d-flex justify-content-center align-items-center">
+                                <form action="" class="d-flex ">
+                                    <input type="search" id="search" placeholder="Buscar" class="form-control">
 
+                                </form>
+
+                            </div>
                             <table id="resNombre" class="table table-bordered table-striped text-center">
                                 <thead>
                                     <tr>
@@ -1004,7 +974,8 @@
                                                                     <label for="nombre">Nombre</label>
                                                                 </div>
                                                                 <div class="form-floating mb-3">
-                                                                    <input type="text" class="form-control" id="tipo-U" placeholder="Tipo">
+                                                                    <input type="text" class="form-control" id="tipo-U"
+                                                                        placeholder="Tipo">
                                                                     <label for="tipo-U">Tipo</label>
                                                                 </div>
 
@@ -1065,7 +1036,13 @@
                         </div>
 
                         <div id="libreta" class="row col-12 dropdown-menu">
+                            <div class="navbar-nav d-flex justify-content-center align-items-center">
+                                <form action="" class="d-flex ">
+                                    <input type="search" id="search" placeholder="Buscar" class="form-control">
 
+                                </form>
+
+                            </div>
                             <table id="resNombre" class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -1150,10 +1127,11 @@
                                                             class="col-12 d-flex justify-content-center align-content-center">
                                                             <div class="col-6 mx-3">
                                                                 <div class="form-floating mb-3">
-                                                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                                                    <input type="text" class="form-control" id="nombre"
+                                                                        placeholder="Nombre">
                                                                     <label for="nombre">Nombre</label>
                                                                 </div>
-                                                                
+
                                                                 <div class="mt-3 col-12 d-flex justify-content-between">
                                                                     <div class="dropdown">
                                                                         <button
@@ -1187,10 +1165,11 @@
                                                             class="col-12 d-flex justify-content-center align-content-center">
                                                             <div class="col-6 mx-3">
                                                                 <div class="form-floating mb-3">
-                                                                    <input type="text" class="form-control" id="nombre-U" placeholder="Nombre">
+                                                                    <input type="text" class="form-control"
+                                                                        id="nombre-U" placeholder="Nombre">
                                                                     <label for="nombre-U">Nombre</label>
                                                                 </div>
-                                                                
+
                                                                 <div class="mt-3 col-12 d-flex justify-content-between">
                                                                     <div class="dropdown">
                                                                         <button
@@ -1230,7 +1209,13 @@
                         </div>
 
                         <div id="libreta" class="row col-12 dropdown-menu">
+                            <div class="navbar-nav d-flex justify-content-center align-items-center">
+                                <form action="" class="d-flex ">
+                                    <input type="search" id="search" placeholder="Buscar" class="form-control">
 
+                                </form>
+
+                            </div>
                             <table id="resNombre" class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -1314,10 +1299,11 @@
                                                             class="col-12 d-flex justify-content-center align-content-center">
                                                             <div class="col-6 mx-3">
                                                                 <div class="form-floating mb-3">
-                                                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+                                                                    <input type="text" class="form-control" id="nombre"
+                                                                        placeholder="Nombre">
                                                                     <label for="nombre">Nombre</label>
                                                                 </div>
-                                                                
+
                                                                 <div class="mt-3 col-12 d-flex justify-content-between">
                                                                     <div class="dropdown">
                                                                         <button
@@ -1421,6 +1407,13 @@
 
                         <div id="libreta" class="row col-12 dropdown-menu">
 
+                            <div class="navbar-nav d-flex justify-content-center align-items-center">
+                                <form action="" class="d-flex ">
+                                    <input type="search" id="search" placeholder="Buscar" class="form-control">
+
+                                </form>
+
+                            </div>
                             <table id="resNombre" class="table table-bordered">
                                 <thead>
                                     <tr>
@@ -1456,9 +1449,9 @@
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <!-- <script src="/js/search-crud-actividades.js"></script> -->
+    <script src="/js/search-crud-actividades.js"></script>
     <script src="/js/search-crud-usuarios.js"></script>
-    <!-- <script src="/js/search-crud-acciones.js"></script> -->
+    <script src="/js/search-crud-acciones.js"></script>
     <script src="/js/disabled.js"></script>
 </body>
 
